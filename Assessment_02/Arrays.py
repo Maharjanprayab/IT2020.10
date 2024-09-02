@@ -67,11 +67,14 @@ def selection_sort(arr):
 
 def bubble_sort(arr):
     i_range = len(arr)
+    print(f"test1 = {arr}")
     for i in range(i_range):
+        print(f"We compare every two successive elements of the array and push the bigger element to the right.")
         j_range = i_range - i -1
         for j in range(j_range):
 	        if arr[j]>arr[j+1]:
                  arr[j], arr[j+1] = arr[j+1], arr[j]
+        print(f"test1 = {arr}")
     print(f"Array after the bubble sort is {arr}")
 
 def sorting(agr):
@@ -95,5 +98,5 @@ def sorting(agr):
 if __name__ == "__main__":
     test, length = test_array()#Create and populate test array
     test1, length1 = test1_array(test)#Create and populate test1 array based on test array
-    sorting(test)
     del test #Explicitly dereferencing 'test' for demosnstration.
+    sorting(test1)
